@@ -42,7 +42,28 @@
             margin-top: 30px;
             border-radius: 50%;
             border: 8px solid #FF5A5F; /* Red */
+            
         }
+
+        footer {
+            background-color: #FF5A5F; /* Red */
+            color: #FFFFFF; /* White */
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #FFFFFF; /* White */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            }
     </style>
 </head>
 <body>
@@ -53,6 +74,11 @@
     <br>
     <img src='cat.gif' alt='cat asking question'>
 
+    
+<footer>
+        Made with ❤️ by <a href="https://cybertrontech.000webhostapp.com">@cybertron</a>
+   </footer>
+    
     <script>
         document.getElementById('noButton').addEventListener('click', function() {
             var yesButton = document.querySelector('button[onclick*="thankyou.html"]');
@@ -60,5 +86,6 @@
             yesButton.style.fontSize = (currentFontSize + 8) + 'px'; // Increase font size by 8px
         });
     </script>
+    
 </body>
 </html>
