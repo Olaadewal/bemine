@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #FFEEEE; /* Light pink */
+            color: #FF5A5F; /* Red */
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        #valentineQuestion {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .answerButton {
+            padding: 15px 30px;
+            font-size: 24px;
+            cursor: pointer;
+            margin: 20px;
+            background-color: #FF5A5F; /* Red */
+            color: #FFFFFF; /* White */
+            border: 2px solid #FF5A5F; /* Red */
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        .answerButton:hover {
+            background-color: #FFFFFF; /* White */
+            color: #FF5A5F; /* Red */
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin-top: 30px;
+            border-radius: 50%;
+            border: 8px solid #FF5A5F; /* Red */
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="valentineQuestion"><b>Will you be my valentine?</b></div>
+    <button class="answerButton" onclick="location.href='thankyou.html'">Yes</button>
+    <button class="answerButton" id="noButton">No</button>
+    <br>
+    <img src='cat.gif' alt='cat asking question'>
+
+    <script>
+        document.getElementById('noButton').addEventListener('click', function() {
+            var yesButton = document.querySelector('button[onclick*="thankyou.html"]');
+            var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
+            yesButton.style.fontSize = (currentFontSize + 8) + 'px'; // Increase font size by 8px
+        });
+    </script>
+</body>
+</html>
